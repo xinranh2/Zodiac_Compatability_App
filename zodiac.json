@@ -1,75 +1,75 @@
 {
   "zodiacs": [
     {
-      "name": Aquarius,
-      "date start": January 20,
-      "date end": February 18,
+      "name": "Aquarius",
+      "date start": "01-20",
+      "date end": "02-18",
       "compatability score":
     },
     {
-      "name": Pisces,
-      "date start": February 19,
-      "date end": March 20,
+      "name": "Pisces",
+      "date start": "02-19",
+      "date end": "03-20",
       "compatability score":
     },
     {
-      "name": Aries,
-      "date start": March 21,
-      "date end": April 19,
+      "name": "Aries",
+      "date start": "03-21",
+      "date end": "04-19",
       "compatability score":
     },
     {
-      "name": Taurus,
-      "date start": April 20,
-      "date end": May 20,
+      "name": "Taurus",
+      "date start": "04-20",
+      "date end": "05-20",
       "compatability score":
     },
     {
-      "name": Gemini,
-      "date start": May 21,
-      "date end": June 20,
+      "name": "Gemini",
+      "date start": "05-21",
+      "date end": "06-20",
       "compatability score":
     },
     {
-      "name": Cancer,
-      "date start": June 21,
-      "date end": July 22,
+      "name": "Cancer",
+      "date start": "06-21",
+      "date end": "07-22",
       "compatability score":
     },
     {
-      "name": Leo,
-      "date start": July 23,
-      "date end": August 22,
+      "name": "Leo",
+      "date start": "07-23",
+      "date end": "08-22",
       "compatability score":
     },
     {
-      "name": Virgo,
-      "date start": August 23,
-      "date end": September 22,
+      "name": "Virgo",
+      "date start": "08-23",
+      "date end": "09-22",
       "compatability score":
     },
     {
-      "name": Libra,
-      "date start": September 23,
-      "date end": October 22,
+      "name": "Libra",
+      "date start": "09-23",
+      "date end": "10-22",
       "compatability score":
     },
     {
-      "name": Scorpio,
-      "date start": October 23,
-      "date end": November 21,
+      "name": "Scorpio",
+      "date start": "10-23",
+      "date end": "11-21",
       "compatability score":
     },
     {
-      "name": Sagittarius,
-      "date start": November 22,
-      "date end": December 21,
+      "name": "Sagittarius",
+      "date start": "11-22",
+      "date end": "12-21",
       "compatability score":
     },
     {
-      "name": Capricorn,
-      "date start": December 22,
-      "date end": January 19,
+      "name": "Capricorn",
+      "date start": "12-22",
+      "date end": "01-19",
       "compatability score":
     ]
   }
