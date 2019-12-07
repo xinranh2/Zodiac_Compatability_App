@@ -1,0 +1,76 @@
+Zodiac: {
+  "zodiacs": [
+    {
+      "name": Aquarius,
+      "date start": January 20,
+      "date end": February 18,
+      "compatability score":
+    },
+    {
+      "name": Pisces,
+      "date start": February 19,
+      "date end": March 20,
+      "compatability score":
+    },
+    {
+      "name": Aries,
+      "date start": March 21,
+      "date end": April 19,
+      "compatability score":
+    },
+    {
+      "name": Taurus,
+      "date start": April 20,
+      "date end": May 20,
+      "compatability score":
+    },
+    {
+      "name": Gemini,
+      "date start": May 21,
+      "date end": June 20,
+      "compatability score":
+    },
+    {
+      "name": Cancer,
+      "date start": June 21,
+      "date end": July 22,
+      "compatability score":
+    },
+    {
+      "name": Leo,
+      "date start": July 23,
+      "date end": August 22,
+      "compatability score":
+    },
+    {
+      "name": Virgo,
+      "date start": August 23,
+      "date end": September 22,
+      "compatability score":
+    },
+    {
+      "name": Libra,
+      "date start": September 23,
+      "date end": October 22,
+      "compatability score":
+    },
+    {
+      "name": Scorpio,
+      "date start": October 23,
+      "date end": November 21,
+      "compatability score":
+    },
+    {
+      "name": Sagittarius,
+      "date start": November 22,
+      "date end": December 21,
+      "compatability score":
+    },
+    {
+      "name": Capricorn,
+      "date start": December 22,
+      "date end": January 19,
+      "compatability score":
+    ]
+  }
+}
