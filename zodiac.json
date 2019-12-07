@@ -3,74 +3,62 @@
     {
       "name": "Aquarius",
       "date start": "01-20",
-      "date end": "02-18",
-      "compatability score": ""
+      "date end": "02-18"
     },
     {
       "name": "Pisces",
       "date start": "02-19",
-      "date end": "03-20",
-      "compatability score": ""
+      "date end": "03-20"
     },
     {
       "name": "Aries",
       "date start": "03-21",
-      "date end": "04-19",
-      "compatability score": ""
+      "date end": "04-19"
     },
     {
       "name": "Taurus",
       "date start": "04-20",
-      "date end": "05-20",
-      "compatability score": ""
+      "date end": "05-20"
     },
     {
       "name": "Gemini",
       "date start": "05-21",
-      "date end": "06-20",
-      "compatability score": ""
+      "date end": "06-20"
     },
     {
       "name": "Cancer",
       "date start": "06-21",
-      "date end": "07-22",
-      "compatability score": ""
+      "date end": "07-22"
     },
     {
       "name": "Leo",
       "date start": "07-23",
-      "date end": "08-22",
-      "compatability score": ""
+      "date end": "08-22"
     },
     {
       "name": "Virgo",
       "date start": "08-23",
-      "date end": "09-22",
-      "compatability score": ""
+      "date end": "09-22"
     },
     {
       "name": "Libra",
       "date start": "09-23",
-      "date end": "10-22",
-      "compatability score": ""
+      "date end": "10-22"
     },
     {
       "name": "Scorpio",
       "date start": "10-23",
-      "date end": "11-21",
-      "compatability score": ""
+      "date end": "11-21"
     },
     {
       "name": "Sagittarius",
       "date start": "11-22",
-      "date end": "12-21",
-      "compatability score": ""
+      "date end": "12-21"
     },
     {
       "name": "Capricorn",
       "date start": "12-22",
-      "date end": "01-19",
-      "compatability score": ""
+      "date end": "01-19"
     ]
   }
 }
