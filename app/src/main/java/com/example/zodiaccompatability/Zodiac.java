@@ -1,21 +1,58 @@
 package com.example.zodiaccompatability;
 
+import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
+
+import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
+
+import java.io.IOException;
 
 public class Zodiac {
-    private int day;
-    private int month;
-    private int year;
+    @SerializedName("zodiacs")
+    public ArrayList<aZodiac> zodiacList; //array of all the zodiacs
 
-    public Zodiac(int aDay, int aMonth, int aYear) {
-        Calendar.set(aYear, aMonth, aDay);
-        day = aDay;
-        month = aMonth;
-        year = aYear;
-    }
+    static public class aZodiac implements Serializable{
+        @SerializedName("name") // each zodiacs name
+        public String name;
+        @SerializedName("date start")
+        public String dateStart;
+        @SerializedName("date end")
+        public String dateEnd;
+        @SerializedName("compatability score")
+        public ArrayList<Score> compatScore; //array of all the scores associated with zodiac
 
-    public String getZodiac() {
-        return "";
+        static public class Score implements Serializable{
+            @SerializedName("name")
+            public String name;
+            @SerializedName("score")
+            public int score;
+        }
+
+        public Calendar getStartCalendar() {
+
+            String[] dates = dateStart.split("-");
+            //System.out.println("StartDate: " + dates[0] + dates[1]);
+            int month = Integer.parseInt(dates[0]);
+            int dayOfMonth = Integer.parseInt(dates[1]);
+            return new Calendar.Builder().setCalendarType("iso8601")
+                    .setDate(1000, month, dayOfMonth).build();
+        }
+        public Calendar getEndCalendar() {
+            String[] dates = dateEnd.split("-");
+            //System.out.println("EndDate" + dates[0] + dates[1]);
+            int month = Integer.parseInt(dates[0]);
+            int dayOfMonth = Integer.parseInt(dates[1]);
+            return new Calendar.Builder().setCalendarType("iso8601")
+                    .setDate(1000, month, dayOfMonth).build();
+        }
+
+        public ArrayList getCompatibilityScores() {
+            return compatScore;
+        }
     }
 }
