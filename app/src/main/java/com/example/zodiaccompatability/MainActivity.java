@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         String myJson = inputStreamToString(this.getResources().openRawResource(R.raw.zodiac1));
 
         zodiac = new Gson().fromJson(myJson, Zodiac.class);
-        //https://www.astrology-zodiac-signs.com/compatibility/
         setUpUI();
     }
     public String inputStreamToString(InputStream inputStream) {
