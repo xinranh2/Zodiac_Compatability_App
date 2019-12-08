@@ -1,0 +1,664 @@
+{
+  "zodiacs": [
+    {
+      "name": "Aquarius",
+      "date start": "01-20",
+      "date end": "02-18",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 90
+        },
+        {
+          "name": "Taurus",
+          "score": 40
+        },
+        {
+          "name": "Gemini",
+          "score": 100
+        },
+        {
+          "name": "Cancer",
+          "score": 40
+        },
+        {
+          "name": "Leo",
+          "score": 55
+        },
+        {
+          "name": "Virgo",
+          "score": 55
+        },
+        {
+          "name": "Libra",
+          "score": 90
+        },
+        {
+          "name": "Scorpio",
+          "score": 45
+        },
+        {
+          "name": "Sagittarius",
+          "score": 95
+        },
+        {
+          "name": "Capricorn",
+          "score": 60
+        },
+        {
+          "name": "Aquarius",
+          "score": 80
+        },
+        {
+          "name": "Pisces",
+          "score": 50
+        },
+      ]
+    },
+    {
+      "name": "Pisces",
+      "date start": "02-19",
+      "date end": "03-20",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 65
+        },
+        {
+          "name": "Taurus",
+          "score": 85
+        },
+        {
+          "name": "Gemini",
+          "score": 45
+        },
+        {
+          "name": "Cancer",
+          "score": 100
+        },
+        {
+          "name": "Leo",
+          "score": 60
+        },
+        {
+          "name": "Virgo",
+          "score": 65
+        },
+        {
+          "name": "Libra",
+          "score": 50
+        },
+        {
+          "name": "Scorpio",
+          "score": 100
+        },
+        {
+          "name": "Sagittarius",
+          "score": 40
+        },
+        {
+          "name": "Capricorn",
+          "score": 100
+        },
+        {
+          "name": "Aquarius",
+          "score": 50
+        },
+        {
+          "name": "Pisces",
+          "score": 75
+        },
+      ]
+    },
+    {
+      "name": "Aries",
+      "date start": "03-21",
+      "date end": "04-19",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 50
+        },
+        {
+          "name": "Taurus",
+          "score": 50
+        },
+        {
+          "name": "Gemini",
+          "score": 85
+        },
+        {
+          "name": "Cancer",
+          "score": 65
+        },
+        {
+          "name": "Leo",
+          "score": 95
+        },
+        {
+          "name": "Virgo",
+          "score": 55
+        },
+        {
+          "name": "Libra",
+          "score": 55
+        },
+        {
+          "name": "Scorpio",
+          "score": 75
+        },
+        {
+          "name": "Sagittarius",
+          "score": 100
+        },
+        {
+          "name": "Capricorn",
+          "score": 40
+        },
+        {
+          "name": "Aquarius",
+          "score": 90
+        },
+        {
+          "name": "Pisces",
+          "score": 65
+        },
+      ]
+    },
+    {
+      "name": "Taurus",
+      "date start": "04-20",
+      "date end": "05-20",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 50
+        },
+        {
+          "name": "Taurus",
+          "score": 100
+        },
+        {
+          "name": "Gemini",
+          "score": 40
+        },
+        {
+          "name": "Cancer",
+          "score": 85
+        },
+        {
+          "name": "Leo",
+          "score": 70
+        },
+        {
+          "name": "Virgo",
+          "score": 90
+        },
+        {
+          "name": "Libra",
+          "score": 65
+        },
+        {
+          "name": "Scorpio",
+          "score": 75
+        },
+        {
+          "name": "Sagittarius",
+          "score": 40
+        },
+        {
+          "name": "Capricorn",
+          "score": 100
+        },
+        {
+          "name": "Aquarius",
+          "score": 40
+        },
+        {
+          "name": "Pisces",
+          "score": 85
+        },
+      ]
+    },
+    {
+      "name": "Gemini",
+      "date start": "05-21",
+      "date end": "06-20",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 85
+        },
+        {
+          "name": "Taurus",
+          "score": 40
+        },
+        {
+          "name": "Gemini",
+          "score": 60
+        },
+        {
+          "name": "Cancer",
+          "score": 45
+        },
+        {
+          "name": "Leo",
+          "score": 90
+        },
+        {
+          "name": "Virgo",
+          "score": 60
+        },
+        {
+          "name": "Libra",
+          "score": 95
+        },
+        {
+          "name": "Scorpio",
+          "score": 50
+        },
+        {
+          "name": "Sagittarius",
+          "score": 75
+        },
+        {
+          "name": "Capricorn",
+          "score": 60
+        },
+        {
+          "name": "Aquarius",
+          "score": 100
+        },
+        {
+          "name": "Pisces",
+          "score": 45
+        },
+      ]
+    },
+    {
+      "name": "Cancer",
+      "date start": "06-21",
+      "date end": "07-22",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 65
+        },
+        {
+          "name": "Taurus",
+          "score": 85
+        },
+        {
+          "name": "Gemini",
+          "score": 45
+        },
+        {
+          "name": "Cancer",
+          "score": 80
+        },
+        {
+          "name": "Leo",
+          "score": 85
+        },
+        {
+          "name": "Virgo",
+          "score": 75
+        },
+        {
+          "name": "Libra",
+          "score": 65
+        },
+        {
+          "name": "Scorpio",
+          "score": 90
+        },
+        {
+          "name": "Sagittarius",
+          "score": 45
+        },
+        {
+          "name": "Capricorn",
+          "score": 60
+        },
+        {
+          "name": "Aquarius",
+          "score": 40
+        },
+        {
+          "name": "Pisces",
+          "score": 100
+        },
+      ]
+    },
+    {
+      "name": "Leo",
+      "date start": "07-23",
+      "date end": "08-22",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 95
+        },
+        {
+          "name": "Taurus",
+          "score": 70
+        },
+        {
+          "name": "Gemini",
+          "score": 90
+        },
+        {
+          "name": "Cancer",
+          "score": 85
+        },
+        {
+          "name": "Leo",
+          "score": 50
+        },
+        {
+          "name": "Virgo",
+          "score": 50
+        },
+        {
+          "name": "Libra",
+          "score": 100
+        },
+        {
+          "name": "Scorpio",
+          "score": 40
+        },
+        {
+          "name": "Sagittarius",
+          "score": 90
+        },
+        {
+          "name": "Capricorn",
+          "score": 50
+        },
+        {
+          "name": "Aquarius",
+          "score": 55
+        },
+        {
+          "name": "Pisces",
+          "score": 60
+        },
+      ]
+    },
+    {
+      "name": "Virgo",
+      "date start": "08-23",
+      "date end": "09-22",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 55
+        },
+        {
+          "name": "Taurus",
+          "score": 90
+        },
+        {
+          "name": "Gemini",
+          "score": 60
+        },
+        {
+          "name": "Cancer",
+          "score": 75
+        },
+        {
+          "name": "Leo",
+          "score": 50
+        },
+        {
+          "name": "Virgo",
+          "score": 95
+        },
+        {
+          "name": "Libra",
+          "score": 40
+        },
+        {
+          "name": "Scorpio",
+          "score": 70
+        },
+        {
+          "name": "Sagittarius",
+          "score": 40
+        },
+        {
+          "name": "Capricorn",
+          "score": 100
+        },
+        {
+          "name": "Aquarius",
+          "score": 55
+        },
+        {
+          "name": "Pisces",
+          "score": 65
+        },
+      ]
+    },
+    {
+      "name": "Libra",
+      "date start": "09-23",
+      "date end": "10-22",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 55
+        },
+        {
+          "name": "Taurus",
+          "score": 65
+        },
+        {
+          "name": "Gemini",
+          "score": 95
+        },
+        {
+          "name": "Cancer",
+          "score": 65
+        },
+        {
+          "name": "Leo",
+          "score": 100
+        },
+        {
+          "name": "Virgo",
+          "score": 40
+        },
+        {
+          "name": "Libra",
+          "score": 80
+        },
+        {
+          "name": "Scorpio",
+          "score": 50
+        },
+        {
+          "name": "Sagittarius",
+          "score": 95
+        },
+        {
+          "name": "Capricorn",
+          "score": 55
+        },
+        {
+          "name": "Aquarius",
+          "score": 90
+        },
+        {
+          "name": "Pisces",
+          "score": 50
+        },
+      ]
+    },
+    {
+      "name": "Scorpio",
+      "date start": "10-23",
+      "date end": "11-21",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 75
+        },
+        {
+          "name": "Taurus",
+          "score": 75
+        },
+        {
+          "name": "Gemini",
+          "score": 50
+        },
+        {
+          "name": "Cancer",
+          "score": 90
+        },
+        {
+          "name": "Leo",
+          "score": 40
+        },
+        {
+          "name": "Virgo",
+          "score": 70
+        },
+        {
+          "name": "Libra",
+          "score": 50
+        },
+        {
+          "name": "Scorpio",
+          "score": 70
+        },
+        {
+          "name": "Sagittarius",
+          "score": 40
+        },
+        {
+          "name": "Capricorn",
+          "score": 95
+        },
+        {
+          "name": "Aquarius",
+          "score": 45
+        },
+        {
+          "name": "Pisces",
+          "score": 100
+        },
+      ]
+    },
+    {
+      "name": "Sagittarius",
+      "date start": "11-22",
+      "date end": "12-21",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 100
+        },
+        {
+          "name": "Taurus",
+          "score": 40
+        },
+        {
+          "name": "Gemini",
+          "score": 75
+        },
+        {
+          "name": "Cancer",
+          "score": 45
+        },
+        {
+          "name": "Leo",
+          "score": 90
+        },
+        {
+          "name": "Virgo",
+          "score": 40
+        },
+        {
+          "name": "Libra",
+          "score": 95
+        },
+        {
+          "name": "Scorpio",
+          "score": 40
+        },
+        {
+          "name": "Sagittarius",
+          "score": 85
+        },
+        {
+          "name": "Capricorn",
+          "score": 60
+        },
+        {
+          "name": "Aquarius",
+          "score": 95
+        },
+        {
+          "name": "Pisces",
+          "score": 40
+        },
+      ]
+    },
+    {
+      "name": "Capricorn",
+      "date start": "12-22",
+      "date end": "01-19",
+      "compatability score": [
+        {
+          "name": "Aries",
+          "score": 40
+        },
+        {
+          "name": "Taurus",
+          "score": 100
+        },
+        {
+          "name": "Gemini",
+          "score": 60
+        },
+        {
+          "name": "Cancer",
+          "score": 60
+        },
+        {
+          "name": "Leo",
+          "score": 50
+        },
+        {
+          "name": "Virgo",
+          "score": 100
+        },
+        {
+          "name": "Libra",
+          "score": 55
+        },
+        {
+          "name": "Scorpio",
+          "score": 95
+        },
+        {
+          "name": "Sagittarius",
+          "score": 60
+        },
+        {
+          "name": "Capricorn",
+          "score": 75
+        },
+        {
+          "name": "Aquarius",
+          "score": 60
+        },
+        {
+          "name": "Pisces",
+          "score": 100
+        },
+      ]
+    }
+  ]
+}
