@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -43,23 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //https://www.astrology-zodiac-signs.com/compatibility/
-
-
-
         setUpUI();
-        final Button calculateButton = (Button) findViewById(R.id.calculate);
-        calculateButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                ProgressBar p = (ProgressBar)findViewById(R.id.progressBar1);
-                if(p.getVisibility() != View.VISIBLE){ // check if it is visible
-                    p.setVisibility(View.VISIBLE); // if not set it to visible
-                    calculateButton.setVisibility(View.GONE); // use 1 or 2 as parameters.. arg0 is the view(your button) from the onclick listener
-                }
-
-                startActivity(populateIntent());
-            }
-        });
-
     }
     public String inputStreamToString(InputStream inputStream) {
         try {
@@ -83,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             Calendar startDate = z.getStartCalendar();
             System.out.println(startDate.get(Calendar.YEAR));
             startDate.set(Calendar.YEAR, calendar.get(Calendar.YEAR));
-            System.out.println(calendar.get(Calendar.YEAR));
+            System.out.println(calendar.get(Calendar.YEAR) + " " + startDate.get(Calendar.YEAR));
 
 
             if (calendar.after(startDate)) {
@@ -99,15 +84,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public Intent populateIntent() {
-
         Zodiac.aZodiac zodiac1 = getZodiac(birthday1);
         Zodiac.aZodiac zodiac2 = getZodiac(birthday2);
-        Intent intent = new Intent(MainActivity.this, ResultsPage.class);
-        intent.putExtra("name1", zodiac1.name);
-        intent.putExtra("name2", zodiac2.name);
 
-        intent.putExtra("scores1", zodiac1.getCompatibilityScores());
-        intent.putExtra("scores2", zodiac2.getCompatibilityScores());
+        Intent intent = new Intent(MainActivity.this, ResultsPage.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("zodiac1", zodiac1);
+        bundle.putSerializable("zodiac2", zodiac2);
+        bundle.putString("name1", zodiac1.name);
+        bundle.putString("name2", zodiac2.name);
+
+        intent.putExtras(bundle);
         return intent;
     }
 
@@ -178,5 +165,30 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        final Button calculateButton = (Button) findViewById(R.id.calculate);
+        calculateButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+
+                if (birthday1 == null || birthday2 == null) {
+                    Toast.makeText(MainActivity.this, "Must input both birthdays", Toast.LENGTH_SHORT).show();
+                } else {
+                    ProgressBar p = (ProgressBar)findViewById(R.id.progressBar1);
+                    if(p.getVisibility() != View.VISIBLE){ // check if it is visible
+                        p.setVisibility(View.VISIBLE); // if not set it to visible
+                        calculateButton.setVisibility(View.GONE); // use 1 or 2 as parameters.. arg0 is the view(your button) from the onclick listener
+                    }
+                    startActivity(populateIntent());
+                }
+            }
+        });
+
+    }
+
+    public void checkInput() {
+        if (birthday1 != null && birthday2 != null) {
+            findViewById(R.id.calculate).setVisibility(View.VISIBLE);
+        } else {
+            Toast.makeText(this, "You did not enter a username", Toast.LENGTH_SHORT).show();
+        }
     }
 }

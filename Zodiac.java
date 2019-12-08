@@ -6,11 +6,9 @@ import java.text.SimpleDateFormat;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+
 import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
 
 import java.io.IOException;
 
@@ -18,7 +16,7 @@ public class Zodiac {
     @SerializedName("zodiacs")
     public ArrayList<aZodiac> zodiacList; //array of all the zodiacs
 
-    static public class aZodiac {
+    static public class aZodiac implements Serializable{
         @SerializedName("name") // each zodiacs name
         public String name;
         @SerializedName("date start")
@@ -26,9 +24,9 @@ public class Zodiac {
         @SerializedName("date end")
         public String dateEnd;
         @SerializedName("compatability score")
-        public ArrayList<Scores> compatScore; //array of all the scores associated with zodiac
+        public ArrayList<Score> compatScore; //array of all the scores associated with zodiac
 
-        static public class Scores {
+        static public class Score implements Serializable{
             @SerializedName("name")
             public String name;
             @SerializedName("score")
