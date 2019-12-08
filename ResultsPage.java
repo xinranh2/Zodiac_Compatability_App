@@ -20,10 +20,11 @@ public class ResultsPage extends AppCompatActivity {
         Bundle bundle = i.getExtras();
         Zodiac.aZodiac first = (Zodiac.aZodiac) bundle.getSerializable("zodiac1");
         Zodiac.aZodiac second = (Zodiac.aZodiac) bundle.getSerializable("zodiac2");
+        System.out.println(first.name + " " + second.name);
         int compatScore = getCompatability(first, second);
 
         TextView show = findViewById(R.id.results);
-        show.setText(compatScore);
+        show.setText(String.valueOf(compatScore));
 
 
         Button againButton = (Button) findViewById(R.id.again);

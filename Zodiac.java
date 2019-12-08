@@ -36,7 +36,7 @@ public class Zodiac {
         public Calendar getStartCalendar() {
 
             String[] dates = dateStart.split("-");
-            System.out.println(dates[0] + dates[1]);
+            //System.out.println("StartDate: " + dates[0] + dates[1]);
             int month = Integer.parseInt(dates[0]);
             int dayOfMonth = Integer.parseInt(dates[1]);
             return new Calendar.Builder().setCalendarType("iso8601")
@@ -44,6 +44,7 @@ public class Zodiac {
         }
         public Calendar getEndCalendar() {
             String[] dates = dateEnd.split("-");
+            //System.out.println("EndDate" + dates[0] + dates[1]);
             int month = Integer.parseInt(dates[0]);
             int dayOfMonth = Integer.parseInt(dates[1]);
             return new Calendar.Builder().setCalendarType("iso8601")

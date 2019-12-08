@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String myJson = inputStreamToString(this.getResources().openRawResource(R.raw.zodiac1));
+
+        zodiac = new Gson().fromJson(myJson, Zodiac.class);
         //https://www.astrology-zodiac-signs.com/compatibility/
         setUpUI();
     }
@@ -59,31 +62,33 @@ public class MainActivity extends AppCompatActivity {
 
 
     public Zodiac.aZodiac getZodiac(Calendar calendar) {
-        String myJson = inputStreamToString(this.getResources().openRawResource(R.raw.zodiac1));
-
-        zodiac = new Gson().fromJson(myJson, Zodiac.class);
-        System.out.println(zodiac.zodiacList.get(0).name);
-
+        System.out.println("Got to getZodiac Method with date: " + calendar.get(Calendar.MONTH)
+                + " " + calendar.get(Calendar.DAY_OF_MONTH));
         for (Zodiac.aZodiac z: zodiac.zodiacList) {
+            System.out.println("Checking if zodiac is: " + z.name);
+
             Calendar startDate = z.getStartCalendar();
-            System.out.println(startDate.get(Calendar.YEAR));
             startDate.set(Calendar.YEAR, calendar.get(Calendar.YEAR));
-            System.out.println(calendar.get(Calendar.YEAR) + " " + startDate.get(Calendar.YEAR));
 
-
-            if (calendar.after(startDate)) {
-                Calendar endDate = z.getEndCalendar();
-                endDate.set(Calendar.YEAR, calendar.get(Calendar.YEAR));
-
-                if (calendar.before(endDate)) {
+            Calendar endDate = z.getEndCalendar();
+            endDate.set(Calendar.YEAR, calendar.get(Calendar.YEAR));
+            if (calendar.after(startDate) || calendar.equals(startDate)) {
+                if (calendar.before(endDate) || calendar.equals(endDate)) {
+                    System.out.println("StartDate: " + startDate.get(Calendar.MONTH) + startDate.get(Calendar.DAY_OF_MONTH));
+                    System.out.println("EndDate: " + endDate.get(Calendar.MONTH) + endDate.get(Calendar.DAY_OF_MONTH));
+                    System.out.println("Zodiac is: " + z.name);
                     return z;
                 }
             }
         }
-        return null;
+
+        System.out.println("Zodiac is not anything?");
+        System.out.println("Zodiac is: " + zodiac.zodiacList.get(10).name);
+        return zodiac.zodiacList.get(10);
     }
 
     public Intent populateIntent() {
+        System.out.println("Got to populateIntent");
         Zodiac.aZodiac zodiac1 = getZodiac(birthday1);
         Zodiac.aZodiac zodiac2 = getZodiac(birthday2);
 
@@ -91,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putSerializable("zodiac1", zodiac1);
         bundle.putSerializable("zodiac2", zodiac2);
-        bundle.putString("name1", zodiac1.name);
-        bundle.putString("name2", zodiac2.name);
+        //bundle.putString("name1", zodiac1.name);
+        //bundle.putString("name2", zodiac2.name);
 
         intent.putExtras(bundle);
         return intent;
@@ -121,9 +126,10 @@ public class MainActivity extends AppCompatActivity {
         firstBdayListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                month = month + 1;
+                System.out.println("month: " + month);
                 birthday1 = new Calendar.Builder().setCalendarType("iso8601")
                         .setDate(year, month, dayOfMonth).build();
-                month = month + 1;
                 Log.d(TAG, "onDateSet: mm/dd/yyyy" + year + "/" + month + "/" + dayOfMonth);
 
                 String date = month + "/" + dayOfMonth + "/" + year;
@@ -154,9 +160,10 @@ public class MainActivity extends AppCompatActivity {
         secondBdayListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+                month = month + 1;
                 birthday2 = new Calendar.Builder().setCalendarType("iso8601")
                         .setDate(year, month, dayOfMonth).build();
-                month = month + 1;
                 Log.d(TAG, "onDateSet: mm/dd/yyyy" + year + "/" + month + "/" + dayOfMonth);
 
                 String date = month + "/" + dayOfMonth + "/" + year;
@@ -177,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
                         p.setVisibility(View.VISIBLE); // if not set it to visible
                         calculateButton.setVisibility(View.GONE); // use 1 or 2 as parameters.. arg0 is the view(your button) from the onclick listener
                     }
+
                     startActivity(populateIntent());
                 }
             }
