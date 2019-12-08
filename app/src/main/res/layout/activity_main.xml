@@ -4,37 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/dob1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/shadows_into_light"
         android:text="Birthday 1"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29000002" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:id="@+id/dob2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/shadows_into_light"
         android:text="Birthday 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dob1"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.13"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="272dp"
+        android:layout_height="158dp"
+        android:fontFamily="@font/gorditas_bold"
+        android:text="Enter you and your partner's birthday to find your compatibility!"
+        app:layout_constraintBottom_toBottomOf="@+id/dob1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dob1" />
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:scrollbarDefaultDelayBeforeFade="400"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/dob2"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="@+id/dob2"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <ProgressBar
             android:id="@+id/progressBar1"
@@ -49,6 +69,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/cool_button"
+            android:fontFamily="@font/shadows_into_light"
             android:text="Calculate!" />
 
     </FrameLayout>
