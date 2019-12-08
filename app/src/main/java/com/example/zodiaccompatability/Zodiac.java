@@ -9,7 +9,7 @@ public class Zodiac {
     private int year;
 
     public Zodiac(int aDay, int aMonth, int aYear) {
-        Calendar.set(aYear, aMonth, aDay);
+        //Calendar.set(aYear, aMonth, aDay);
         day = aDay;
         month = aMonth;
         year = aYear;

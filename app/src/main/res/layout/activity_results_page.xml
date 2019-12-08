@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultsPage">
+    tools:context=".ResultsPage"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/results"
@@ -20,6 +21,8 @@
         android:id="@+id/again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/cool_button"
+        android:fontFamily="@font/shadows_into_light"
         android:text="Try Again!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
