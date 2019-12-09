@@ -109,9 +109,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Calendar cal = Calendar.getInstance();
-                int year = cal.get(Calendar.YEAR);
+                int year = cal.get(Calendar.YEAR);;
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
+                if (birthday1 != null) {
+                    year = birthday1.get(Calendar.YEAR);
+                    month = birthday1.get(Calendar.MONTH) - 1;
+                    day = birthday1.get(Calendar.DAY_OF_MONTH);
+                }
 
                 DatePickerDialog dialog = new DatePickerDialog(
                         MainActivity.this,
@@ -142,10 +147,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Calendar cal = Calendar.getInstance();
-                int year = cal.get(Calendar.YEAR);
+                int year = cal.get(Calendar.YEAR);;
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
-
+                if (birthday2 != null) {
+                    year = birthday2.get(Calendar.YEAR);
+                    month = birthday2.get(Calendar.MONTH) - 1;
+                    day = birthday2.get(Calendar.DAY_OF_MONTH);
+                }
                 DatePickerDialog dialog = new DatePickerDialog(
                         MainActivity.this,
                         android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth,
