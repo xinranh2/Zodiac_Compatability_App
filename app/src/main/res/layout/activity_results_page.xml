@@ -11,7 +11,9 @@
         android:id="@+id/results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/shadows_into_light"
         android:text="##"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,4 +31,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/results"
         app:layout_constraintVertical_bias="0.162" />
+
+    <Button
+        android:id="@+id/sign1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cool_button"
+        android:fontFamily="@font/shadows_into_light"
+        android:text="Your Sign"
+        app:layout_constraintBottom_toTopOf="@+id/results"
+        app:layout_constraintEnd_toStartOf="@+id/sign2"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sign2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cool_button"
+        android:fontFamily="@font/shadows_into_light"
+        android:text="Partner Sign"
+        app:layout_constraintBottom_toTopOf="@+id/results"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toStartOf="@+id/results"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/shadows_into_light"
+        android:text="sign"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/results"
+        app:layout_constraintEnd_toEndOf="@+id/sign1"
+        app:layout_constraintStart_toStartOf="@+id/sign1"
+        app:layout_constraintTop_toTopOf="@+id/sign1" />
+
+    <TextView
+        android:id="@+id/result2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/shadows_into_light"
+        android:text="sign"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/results"
+        app:layout_constraintEnd_toEndOf="@+id/sign2"
+        app:layout_constraintStart_toStartOf="@+id/sign2"
+        app:layout_constraintTop_toTopOf="@+id/sign2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

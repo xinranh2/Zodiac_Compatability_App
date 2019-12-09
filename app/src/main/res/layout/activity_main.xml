@@ -7,6 +7,18 @@
     tools:context=".MainActivity"
     android:background="@drawable/background">
 
+    <Button
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cool_button"
+        android:fontFamily="@font/shadows_into_light"
+        android:text="Enter you and your partner's birthday to find your compatibility!"
+        app:layout_constraintBottom_toTopOf="@+id/dob1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
     <TextView
         android:id="@+id/dob1"
         android:layout_width="wrap_content"
@@ -18,7 +30,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.2"
+        />
 
     <TextView
         android:id="@+id/dob2"
@@ -33,16 +46,7 @@
         app:layout_constraintVertical_bias="0.13"
         android:textSize="25dp"/>
 
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="272dp"
-        android:layout_height="158dp"
-        android:fontFamily="@font/gorditas_bold"
-        android:text="Enter you and your partner's birthday to find your compatibility!"
-        app:layout_constraintBottom_toBottomOf="@+id/dob1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dob1" />
+
 
     <FrameLayout
         android:id="@+id/frameLayout"

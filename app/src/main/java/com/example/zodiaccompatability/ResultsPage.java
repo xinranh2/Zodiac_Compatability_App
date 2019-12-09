@@ -24,7 +24,7 @@ public class ResultsPage extends AppCompatActivity {
         int compatScore = getCompatability(first, second);
 
         TextView show = findViewById(R.id.results);
-        show.setText(String.valueOf(compatScore));
+        show.setText(String.valueOf(compatScore) + "%");
 
 
         Button againButton = (Button) findViewById(R.id.again);
@@ -34,6 +34,12 @@ public class ResultsPage extends AppCompatActivity {
                 startActivity(new Intent(ResultsPage.this, MainActivity.class));
             }
         });
+
+        TextView result1 = findViewById(R.id.result1);
+        TextView result2 = findViewById(R.id.result2);
+
+        result1.setText(first.name);
+        result2.setText(second.name);
 
     }
 
