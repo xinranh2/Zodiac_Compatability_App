@@ -4,9 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.plattysoft.leonids.ParticleSystem;
 
 public class ResultsPage extends AppCompatActivity {
 
@@ -21,11 +26,23 @@ public class ResultsPage extends AppCompatActivity {
         Zodiac.aZodiac first = (Zodiac.aZodiac) bundle.getSerializable("zodiac1");
         Zodiac.aZodiac second = (Zodiac.aZodiac) bundle.getSerializable("zodiac2");
         System.out.println(first.name + " " + second.name);
-        int compatScore = getCompatability(first, second);
+        final int compatScore = getCompatability(first, second);
 
-        TextView show = findViewById(R.id.results);
+        final TextView show = findViewById(R.id.results);
         show.setText(String.valueOf(compatScore) + "%");
 
+        ViewTreeObserver viewTreeObserver = show.getViewTreeObserver();
+        if (viewTreeObserver.isAlive()) {
+            viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    show.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                    if (compatScore == 100) {
+                        confetti(show);
+                    }
+                }
+            });
+        }
 
         Button againButton = (Button) findViewById(R.id.again);
 
@@ -43,6 +60,14 @@ public class ResultsPage extends AppCompatActivity {
 
     }
 
+    public void confetti(TextView view) {
+        new ParticleSystem(this, 100, R.drawable.animated_confetti, 1500)
+                .setScaleRange(0.7f, 1.3f)
+                .setSpeedRange(0.1f, 0.25f)
+                .setRotationSpeedRange(90, 180)
+                .setFadeOut(200, new AccelerateInterpolator())
+                .oneShot(view, 100);
+    }
     public int getCompatability(Zodiac.aZodiac a, Zodiac.aZodiac b) {
         for (Zodiac.aZodiac.Score i : a.compatScore) {
             if (i.name.equals(b.name)) {
