@@ -19,7 +19,28 @@ public class ResultsPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_page);
+        setUpUi();
+    }
 
+    public void confetti(TextView view) {
+        new ParticleSystem(this, 100, R.drawable.animated_confetti, 1500)
+                .setScaleRange(0.7f, 1.3f)
+                .setSpeedRange(0.1f, 0.25f)
+                .setRotationSpeedRange(90, 180)
+                .setFadeOut(200, new AccelerateInterpolator())
+                .oneShot(view, 100);
+    }
+
+    public int getCompatability(Zodiac.aZodiac a, Zodiac.aZodiac b) {
+        for (Zodiac.aZodiac.Score i : a.compatScore) {
+            if (i.name.equals(b.name)) {
+                return i.score;
+            }
+        }
+        return 0;
+    }
+
+    public void setUpUi() {
         Intent i = getIntent();
 
         Bundle bundle = i.getExtras();
@@ -37,7 +58,7 @@ public class ResultsPage extends AppCompatActivity {
                 @Override
                 public void onGlobalLayout() {
                     show.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                    if (compatScore == 100) {
+                    if (compatScore >= 90) {
                         confetti(show);
                     }
                 }
@@ -57,23 +78,5 @@ public class ResultsPage extends AppCompatActivity {
 
         result1.setText(first.name);
         result2.setText(second.name);
-
-    }
-
-    public void confetti(TextView view) {
-        new ParticleSystem(this, 100, R.drawable.animated_confetti, 1500)
-                .setScaleRange(0.7f, 1.3f)
-                .setSpeedRange(0.1f, 0.25f)
-                .setRotationSpeedRange(90, 180)
-                .setFadeOut(200, new AccelerateInterpolator())
-                .oneShot(view, 100);
-    }
-    public int getCompatability(Zodiac.aZodiac a, Zodiac.aZodiac b) {
-        for (Zodiac.aZodiac.Score i : a.compatScore) {
-            if (i.name.equals(b.name)) {
-                return i.score;
-            }
-        }
-        return 0;
     }
 }
