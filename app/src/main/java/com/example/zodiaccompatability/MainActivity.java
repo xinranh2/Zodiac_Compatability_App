@@ -199,12 +199,4 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    public void checkInput() {
-        if (birthday1 != null && birthday2 != null) {
-            findViewById(R.id.calculate).setVisibility(View.VISIBLE);
-        } else {
-            Toast.makeText(this, "You did not enter a username", Toast.LENGTH_SHORT).show();
-        }
-    }
 }
